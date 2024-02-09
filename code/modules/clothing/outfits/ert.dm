@@ -76,13 +76,13 @@
 	mask = /obj/item/clothing/mask/gas/explorer
 	shoes = /obj/item/clothing/shoes/bhop
 	uniform = /obj/item/clothing/under/rank/miner/lavaland
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert)
 	backpack_contents = list(
 		/obj/item/storage/box/survival_mining=1,
 		/obj/item/crusher_trophy/demon_claws=1,
 		/obj/item/crusher_trophy/watcher_wing=1,
 		/obj/item/reagent_containers/autoinjector/medipen/survival=3,
 		/obj/item/kinetic_javelin=1,
-		/obj/item/dnainjector/dwarf=1,
 		/obj/item/kinetic_javelin_core/green=1
 		)
 	l_pocket = /obj/item/reagent_containers/glass/beaker/bluespace/dorf
@@ -96,6 +96,7 @@
 	var/obj/item/radio/R = H.ears
 	R.keyslot = new /obj/item/encryptionkey/heads/cmo
 	R.recalculateChannels()
+	H.dna.add_mutation(dwarfism)
 
 /datum/outfit/ert/commander/alert
 	name = "ERT Commander - High Alert"
